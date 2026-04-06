@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: azure;
+                margin: 0;
+                font-family: sans-serif;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: minmax(160px, 15%) 1fr;
+                grid-template-rows: auto auto 1fr auto;
+                grid-template-areas: "store store"
+                                     "sale sale"
+                                     "categories products"
+                                     "rights rights";
+                min-height: 100vh;
+            }
+            .header {
+                grid-area: store;
+                background-color: aquamarine;
+                display: flex;
+                padding: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+            .sale {
+                grid-area: sale;
+                background-color: rgb(36, 36, 118);
+                color: white;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 12px;
+            }
+
+            .categories {
+                grid-area: categories;
+                padding: 30px 0px; 
+                font-weight: bold;
+                background-color: #e0f2f1;
+                border-right: 1px solid #ccc;
+            }
+            
+            .category-title {
+                font-size: 1.2em; 
+                margin: 0 20px 20px 20px; 
+                border-bottom: 2px solid aquamarine; 
+                padding-bottom: 5px;
+            }
+            .category-item {
+                display: block; 
+                padding: 10px 20px;
+                cursor: pointer; 
+                transition: background-color 0.3s; 
+                font-weight: normal;
+            }
+            .category-item:hover {
+                background-color: #b2dfdb; 
+                color: #004d40;
+            }
+            .products {
+                grid-area: products;
+                padding: 30px;
+                background-color: white;
+                display: flex;         
+                flex-wrap: wrap;       
+                gap: 25px;             
+                justify-content: center; 
+            }
+            .product-table-container {
+                border: 1px solid #eee;
+                width: 260px; 
+                padding: 20px;
+                background-color: #fff;
+                box-sizing: border-box;
+                border-radius: 4px;
+            }
+            .product-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .product-table th {
+                padding-bottom: 15px;
+                font-size: 1.1em;
+                color: #333;
+            }
+            .product-table td {
+                padding: 8px 0;
+                text-align: center;
+            }
+            .product-img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 4px;
+                background-color: #f9f9f9;
+            }
+            .price-text {
+                color: #00796b; 
+                font-weight: bold; 
+                padding-top: 15px;
+                font-size: 1.1em;
+            }
+            .footer {
+                grid-area: rights;
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                font-size: 14px;
+            }
+            .button {
+                cursor: pointer;
+                background-color: rgb(36, 36, 118);
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                margin-top: 15px;
+                display: inline-block;
+                border-radius: 4px;
+                font-size: 13px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .button:hover {
+                background-color: #4a4ae2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <a href="#"><h3>E-COMMERCE STORE</h3></a>
+            </div>
+            <div class="sale">
+                <marquee scrollamount="10">
+                    🔥Flash sale is live! - get 50% off on all items🔥
+                </marquee>
+            </div>
+            <div class="categories">
+                <div class="category-title">CATEGORIES</div>
+                <a href="#" class="category-item">Electronics</a>
+                <a href="#" class="category-item">Fashion</a>
+                <a href="#" class="category-item">Home & Living</a>
+                <a href="#" class="category-item">Accessories</a>
+                <a href="#" class="category-item">Beauty</a>
+            </div>
+            <div class="products">
+                <div class="product-table-container">
+                    <table class="product-table">
+                        <tr><th>Smart Watch Pro</th></tr>
+                        <tr>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80" alt="Smart Watch" class="product-img">
+                            </td>
+                        </tr>
+                        <tr><td class="price-text">₹15,999</td></tr>
+                        <tr>
+                            <td>
+                                <a href="#" class="button">Buy Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="product-table-container">
+                    <table class="product-table">
+                        <tr><th>Wireless Buds</th></tr>
+                        <tr>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=300&q=80" alt="Wireless Buds" class="product-img">
+                            </td>
+                        </tr>
+                        <tr><td class="price-text">₹6,499</td></tr>
+                        <tr>
+                            <td>
+                                <a href="#" class="button">Buy Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="product-table-container">
+                    <table class="product-table">
+                        <tr><th>Gaming Mouse</th></tr>
+                        <tr>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=300&q=80" alt="Gaming Mouse" class="product-img">
+                            </td>
+                        </tr>
+                        <tr><td class="price-text">₹3,299</td></tr>
+                        <tr>
+                            <td>
+                                <a href="#" class="button">Buy Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="product-table-container">
+                    <table class="product-table">
+                        <tr><th>4K LED Monitor</th></tr>
+                        <tr>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=300&q=80" alt="LED Monitor" class="product-img">
+                            </td>
+                        </tr>
+                        <tr><td class="price-text">₹24,999</td></tr>
+                        <tr>
+                            <td>
+                                <a href="#" class="button">Buy Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="product-table-container">
+                    <table class="product-table">
+                        <tr><th>Mechanical Keyboard</th></tr>
+                        <tr>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=300&q=80" alt="Keyboard" class="product-img">
+                            </td>
+                        </tr>
+                        <tr><td class="price-text">₹9,999</td></tr>
+                        <tr>
+                            <td>
+                                <a href="#" class="button">Buy Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="product-table-container">
+                    <table class="product-table">
+                        <tr><th>USB-C Hub</th></tr>
+                        <tr>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=300&q=80" alt="Hub" class="product-img">
+                            </td>
+                        </tr>
+                        <tr><td class="price-text">₹4,499</td></tr>
+                        <tr>
+                            <td>
+                                <a href="#" class="button">Buy Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="footer">
+                <div>© 2026 E-Commerce Store. All rights reserved.</div>
+            </div>
+        </div>
+    </body>
+</html>

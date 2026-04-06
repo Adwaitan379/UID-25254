@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: whitesmoke;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            background-color: aqua;
+            padding: 20px;
+        }
+        .card {
+            width: 300px;
+            background-color: antiquewhite;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .image {
+            width: 100%;
+            height: 350px; 
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .button {
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <p style="text-align: center;">Adwaitan-25254</p>
+    <div class="container">
+        <div class="card">
+            <img class="image" src="brahma.jpg" alt="Lord Brahma">
+            <h3>Lord Brahma</h3>
+            <p>The Creator</p>
+            <button class="button">Learn more</button>
+        </div>
+        <div class="card">
+            <img class="image" src="vishnu.jpg" alt="Lord Vishnu">
+            <h3>Lord Vishnu</h3>
+            <p>The Preserver</p>
+            <button class="button">Learn more</button>
+        </div>
+        <div class="card">
+            <img class="image" src="shiva.jpg" alt="Lord Shiva">
+            <h3>Lord Shiva</h3>
+            <p>The Transformer</p>
+            <button class="button">Learn more</button>
+        </div>
+    </div>
+</body>
+</html>

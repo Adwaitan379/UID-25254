@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rotating Square</title>
+<style>
+body {
+margin: 0;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+background-color: #ff7ae0;
+font-family: Arial, sans-serif;
+padding-top: 50px;
+}
+.square {
+width: 120px;
+height: 120px;
+background: #ffffffcc;
+border-radius: 12px;
+box-shadow: 0 8px 25px rgba(216, 55, 55, 0.2);
+animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+</style>
+</head>
+<body>
+<p>Adwaitan-25254</p>
+<h1 style="color: #3467a9;">Rotating Square</h1>
+<div class="square"></div>
+</body>
+</html>
