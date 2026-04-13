@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial Finder</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 40px;
+            background-color: white;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #2196f3; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Factorial Finder</h2>
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="check()">Calculate</button>
+    <div id="result"></div>
+    <script>
+    function check() {
+        let n = document.getElementById("num").value;
+        let k = 1;
+        if (n === "") {
+            document.getElementById("result").innerHTML = "Please enter a number first.";
+            return;
+        }
+        for (let i = 1; i <= n; i++) {
+            k = k * i;
+        }        
+        document.getElementById("result").innerHTML = "Factorial of " + n + " is " + k;
+    }
+    </script>
+</body>
+</html>

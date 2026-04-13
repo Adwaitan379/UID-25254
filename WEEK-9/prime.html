@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PRIME CHECKER</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 40px;
+            background-color: white;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Is it a Prime Number?</h2>
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="check()">Check Prime</button>
+    <div id="result"></div>
+    <script>
+    function check() {
+        let n = document.getElementById("num").value;
+        let count = 0;
+        
+        if (n === "") {
+            document.getElementById("result").innerHTML = "Please enter a number!";
+            return;
+        }
+        for (let i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+            document.getElementById("result").innerHTML = n + " is a Prime Number!";
+        } else {
+            document.getElementById("result").innerHTML = n + " is Not a Prime Number.";
+        }
+    }
+    </script>
+</body>
+</html>
