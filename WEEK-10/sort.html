@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find the Largest Number</title>
+</head>
+<body>
+    <p>Adwaitan-25254</p>
+    <h2>Find the Largest of Five Numbers</h2>
+    <p>Enter five numbers below:</p>
+    <input type="number" id="n1" placeholder="Num 1">
+    <input type="number" id="n2" placeholder="Num 2">
+    <input type="number" id="n3" placeholder="Num 3">
+    <input type="number" id="n4" placeholder="Num 4">
+    <input type="number" id="n5" placeholder="Num 5">
+    <br><br>
+    <button onclick="calculateLargest()">Find Largest</button>
+    <script>
+        function calculateLargest() {
+            // Get all five values from the inputs
+            const a = parseFloat(document.getElementById('n1').value);
+            const b = parseFloat(document.getElementById('n2').value);
+            const c = parseFloat(document.getElementById('n3').value);
+            const d = parseFloat(document.getElementById('n4').value);
+            const e = parseFloat(document.getElementById('n5').value);
+            if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d) || isNaN(e)) {
+                alert("Please enter all five numbers!");
+                return;
+            }
+            findMax(a, b, c, d, e);
+        }
+        function findMax(v1, v2, v3, v4, v5) {
+            let largest = v1;
+            if (v2 > largest) {
+                largest = v2;
+            }
+            if (v3 > largest) {
+                largest = v3;
+            }
+            if (v4 > largest) {
+                largest = v4;
+            }
+            if (v5 > largest) {
+                largest = v5;
+            }
+            alert("The largest number is: " + largest);
+        }
+    </script>
+</body>
+</html>

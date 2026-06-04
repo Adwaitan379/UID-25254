@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort My Numbers</title>
+</head>
+<body>
+    <p>Adwaitan-25254</p>
+    <h2>Number Sorter</h2>
+    <p>Enter three numbers to sort them:</p>
+    <input type="number" id="num1" placeholder="First number">
+    <input type="number" id="num2" placeholder="Second number">
+    <input type="number" id="num3" placeholder="Third number">
+    <br><br>
+    <button onclick="getAndSort()">Sort These!</button>
+    <script>
+        function getAndSort() {
+            let n1 = parseFloat(document.getElementById('num1').value);
+            let n2 = parseFloat(document.getElementById('num2').value);
+            let n3 = parseFloat(document.getElementById('num3').value);
+
+            // 2. Check if all boxes have numbers
+            if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+                alert("Please fill in all three boxes!");
+                return;
+            }
+            sortThree(n1, n2, n3);
+        }
+        function sortThree(a, b, c) {
+            let temp;
+            if (a > b) { temp = a; a = b; b = temp; }
+            if (b > c) { temp = b; b = c; c = temp; }
+            if (a > b) { temp = a; a = b; b = temp; }
+            alert("Sorted order: " + a + ", " + b + ", " + c);
+        }
+    </script>
+</body>
+</html>

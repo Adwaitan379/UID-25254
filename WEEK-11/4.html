@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Validation</title>
+</head>
+<body>
+    <h2>Enter Mobile Number</h2>
+    
+    <input type="text" id="mobile" placeholder="Enter 10 digits">
+    
+    <button onclick="checkMobile()">Check Number</button>
+    
+    <p id="msg"></p>
+
+    <script>
+        function checkMobile() {
+            // 1. Get the value from the input box
+            let number = document.getElementById("mobile").value;
+            let message = document.getElementById("msg");
+
+            // 2. Define the rule: ^ means start, \d{10} means 10 digits, $ means end
+            let pattern = /^\d{10}$/;
+
+            // 3. Test the input against the rule
+            if (pattern.test(number)) {
+                message.innerText = "Valid Mobile Number";
+                message.style.color = "green";
+            } else {
+                message.innerText = "Invalid Mobile Number. Please enter exactly 10 digits.";
+                message.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
